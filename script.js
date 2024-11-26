@@ -3,6 +3,14 @@ function toggleMenu() {
     menu.classList.toggle("active");
 }
 
+// Ensure the first section is visible when the page loads
+window.addEventListener('load', () => {
+    const firstSection = document.querySelector('section');
+    if (firstSection) {
+        firstSection.classList.add('show');
+    }
+});
+
 // Efekty při scrollování
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section');
@@ -15,10 +23,4 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Ensure the first section is visible when the page loads
-window.addEventListener('load', () => {
-    const firstSection = document.querySelector('section');
-    if (firstSection) {
-        firstSection.classList.add('show');
-    }
-});
+
