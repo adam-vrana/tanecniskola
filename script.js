@@ -22,6 +22,9 @@ window.addEventListener('scroll', () => {
 // JavaScript for toggling the menu on mobile
 function toggleMenu() {
     const menu = document.getElementById('menu');
-    menu.classList.toggle('show');
+    const toggle = document.querySelector('.menu-toggle');
+    menu.classList.toggle('active');  // Toggle the menu visibility
+    toggle.classList.toggle('active');  // Optionally add some style to the icon
 }
+
 

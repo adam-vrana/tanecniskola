@@ -325,29 +325,51 @@ footer p {
     font-size: 14px;
 }
 
+/* Initially hide the menu on mobile */
+
 /* Media Queries */
 /* Media Queries */
 @media screen and (max-width: 768px) {
     /* Hide the navigation menu by default on small screens */
-    header nav ul {
-        display: none;
-        flex-direction: column; /* Stack menu items vertically */
-        align-items: flex-start; /* Align the items to the start */
-        width: 100%; /* Make the navigation full width */
+    #menu {
+        display: none;  /* Hide menu on small screens by default */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 8px 8px;
     }
 
-    /* Display the menu-toggle button on mobile */
-    .menu-toggle {
+    #menu li {
+        padding: 10px;
+        text-align: center;
+    }
+
+    #menu li a {
         display: block;
-        font-size: 30px;
-        cursor: pointer;
+        padding: 10px;
         color: #333;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
     }
 
-    /* When the menu is active, show the menu items */
-    #menu.show {
-        display: flex;
+    #menu li a:hover {
+        background-color: #e50914;
+        color: white;
     }
+}
+
+/* Ensure the menu toggle button appears when screen width is less than 768px */
+.menu-toggle {
+    display: block;
+}
+
+/* Display menu when it's active (clicked) */
+.menu-toggle.active {
+    transform: rotate(90deg);  /* Optional: Add a rotation to the icon */
 
     /* Adjust the header styles for small screens */
     #intro {
