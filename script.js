@@ -1,7 +1,3 @@
-function toggleMenu() {
-    const menu = document.getElementById("menu");
-    menu.classList.toggle("active");
-}
 
 // Ensure the first section is visible when the page loads
 window.addEventListener('load', () => {
