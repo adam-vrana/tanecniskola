@@ -19,4 +19,9 @@ window.addEventListener('scroll', () => {
     });
 });
 
+// JavaScript for toggling the menu on mobile
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show');
+}
 

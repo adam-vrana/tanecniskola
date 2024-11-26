@@ -326,7 +326,30 @@ footer p {
 }
 
 /* Media Queries */
+/* Media Queries */
 @media screen and (max-width: 768px) {
+    /* Hide the navigation menu by default on small screens */
+    header nav ul {
+        display: none;
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: flex-start; /* Align the items to the start */
+        width: 100%; /* Make the navigation full width */
+    }
+
+    /* Display the menu-toggle button on mobile */
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: #333;
+    }
+
+    /* When the menu is active, show the menu items */
+    #menu.show {
+        display: flex;
+    }
+
+    /* Adjust the header styles for small screens */
     #intro {
         height: auto;
         padding: 40px 20px;
@@ -345,12 +368,12 @@ footer p {
     }
 
     .about-container {
-        flex-direction: column; /* Stack text and image vertically */
-        text-align: center; /* Center align content */
+        flex-direction: column;
+        text-align: center;
     }
 
     .about-text {
-        max-width: 100%; /* Full width on small screens */
+        max-width: 100%;
     }
 
     #about img {
@@ -358,3 +381,4 @@ footer p {
         max-width: 300px;
     }
 }
+
