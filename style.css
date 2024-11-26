@@ -97,6 +97,7 @@ header nav ul li a:hover::after {
     transform-origin: bottom left;
 }
 
+
 /* Mobile Menu Toggle */
 .menu-toggle {
     display: none;
@@ -231,6 +232,8 @@ section.show {
     transform: translateY(0);
 }
 
+
+
 /* Section Titles */
 section h2 {
     font-size: 32px;
@@ -328,19 +331,7 @@ section h2 {
     transform: scale(1.05);
 }
 
-/* Reviews */
-#reviews .review {
-    background-color: #f7f7f7;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
 
-#reviews .review p {
-    font-size: 18px;
-    color: #333;
-}
 
 /* Footer */
 footer {
