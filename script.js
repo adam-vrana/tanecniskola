@@ -14,3 +14,11 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// Ensure the first section is visible when the page loads
+window.addEventListener('load', () => {
+    const firstSection = document.querySelector('section');
+    if (firstSection) {
+        firstSection.classList.add('show');
+    }
+});
