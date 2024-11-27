@@ -114,6 +114,98 @@ main {
 }
 
 /* Hero Section */
+
+/* Section Styling */
+#actuality {
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#actuality h2 {
+    font-size: 32px;
+    color: #000000;
+    border-bottom: 2px solid #e50914;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    transition: color 0.3s ease-in-out; 
+}
+
+#actuality h2:hover {
+    color: #e50914;  
+}
+
+/* News Container */
+.actuality-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* News Card */
+.news-card {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+/* News Card Content */
+.news-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 15px;
+}
+
+.news-content h3 {
+    font-size: 1.2em;
+    margin: 0 0 10px;
+    color: #e50914;
+}
+
+.news-date {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.news-description {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.read-more {
+    display: inline-block;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: #e50914;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #b00710;
+}
+
 #intro {
     position: relative;
     background-image: url('images/intro.jpg');
@@ -124,6 +216,12 @@ main {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.336);
     margin-bottom: 40px;
+    transition: transform 0.3s ease, opacity 0.3s ease;  /* Add smooth transitions */
+}
+
+#intro:hover {
+    transform: scale(1.05);  /* Subtle zoom effect on hover */
+    opacity: 0.95;  /* Slight opacity reduction on hover */
 }
 
 #intro::before {
@@ -142,22 +240,45 @@ main {
     color: white;
     z-index: 1;  /* Ensures text is above the overlay */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds a shadow for better legibility */
+    animation: fadeInUp 1.2s ease-out;  /* Add text fade-in effect */
+}
+
+/* Animations for smoother text entry */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* About Section */
 /* About Section */
 #about {
-    margin-top: 40px;
+    margin-top: 50px;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
 }
 
 #about h2 {
     font-size: 32px;
-    color: #e50914;
-    text-align: left; /* Center the title */
+    color: #000000;
+    text-align: center; /* Center the title */
     border-bottom: 2px solid #e50914;
     padding-bottom: 10px;
     margin-bottom: 20px;
     font-weight: 700;
+    transition: color 0.3s ease-in-out;  /* Smooth color transition */
+}
+
+#about h2:hover {
+    color: #e50914;  /* Highlight color on hover */
 }
 
 /* Container for text and image */
@@ -167,17 +288,29 @@ main {
     justify-content: space-between;
     flex-wrap: wrap; /* Ensures responsiveness */
     gap: 20px; /* Space between text and image */
+    transition: transform 0.5s ease-in-out;
 }
 
+.about-container:hover {
+    transform: translateY(-10px);  /* Subtle upward motion on hover */
+}
+
+/* Text styling */
 .about-text {
     flex: 1; /* Takes up remaining space */
     max-width: 50%; /* Limit width for better layout */
+    transition: color 0.3s ease-in-out;
+}
+
+.about-text:hover {
+    color: #e50914;  /* Change color on hover */
 }
 
 .about-text p {
     font-size: 18px;
     line-height: 1.6;
     color: #333;
+    transition: color 0.3s ease-in-out;
 }
 
 #about img {
@@ -186,7 +319,8 @@ main {
     object-fit: cover; /* Crop the image nicely */
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
 }
 
 #about img:hover {
@@ -194,7 +328,7 @@ main {
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
 
-
+/* Scroll animations */
 section {
     opacity: 0;
     transform: translateY(50px);
@@ -206,39 +340,93 @@ section.show {
     transform: translateY(0);
 }
 
-
-
 /* Section Titles */
 section h2 {
     font-size: 32px;
-    color: #e50914;
+    color: #000000;
     border-bottom: 2px solid #e50914;
     padding-bottom: 10px;
     margin-bottom: 20px;
     font-weight: 700;
+    transition: color 0.3s ease-in-out;  /* Add transition for color change */
+}
+
+section h2:hover {
+    color: #e50914;  /* Highlight color on hover */
 }
 
 /* Course List */
+#courses {
+    margin-top: 50px;
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#courses h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e50914;
+    padding-bottom: 10px;
+}
+
 #courses ul {
     list-style-type: none;
     margin: 20px 0;
+    padding: 0;
     font-size: 20px;
     line-height: 1.8;
 }
 
 #courses ul li {
     margin-bottom: 12px;
-    transition: all 0.3s ease;
+    padding: 12px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease, padding-left 0.2s ease;
 }
 
 #courses ul li:hover {
     background-color: #e50914;
     color: white;
-    padding-left: 10px;
-    border-radius: 4px;
+    padding-left: 15px;
+}
+
+#courses ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+#courses ul li a:hover {
+    color: #fff;
 }
 
 /* Contact Section */
+#contact {
+    margin-top: 50px;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e50914;
+    padding-bottom: 10px;
+}
+
 #contact iframe {
     width: 100%;
     height: 400px;
@@ -246,15 +434,39 @@ section h2 {
     border-radius: 12px;
     margin-top: 20px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#contact iframe:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+#register {
+    margin-top: 50px;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#register h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e50914;
+    padding-bottom: 10px;
 }
 
 #register form {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
@@ -262,14 +474,16 @@ section h2 {
 #register form input, #register form select {
     padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px;
     font-size: 16px;
     transition: all 0.3s ease;
+    background-color: #f9f9f9;
 }
 
 #register form input:focus, #register form select:focus {
     border-color: #e50914;
     outline: none;
+    background-color: #fff; /* Ensure the background is white on focus */
 }
 
 #register form button {
@@ -277,17 +491,36 @@ section h2 {
     color: white;
     padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 #register form button:hover {
     background-color: #d40813;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
 
 /* Gallery */
+#gallery {
+    margin-top: 50px;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#gallery h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e50914;
+    padding-bottom: 10px;
+}
+
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -296,13 +529,16 @@ section h2 {
 
 .gallery-container img {
     width: 100%;
+    height: 100%;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
 }
 
 .gallery-container img:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -333,6 +569,22 @@ footer p {
 /* Media Queries */
 @media screen and (max-width: 768px) {
     /* Hide the navigation menu by default on small screens */
+    #intro {
+        padding: 80px 20px;  /* Adjust padding for smaller screens */
+    }
+
+    #intro h1 {
+        font-size: 2.5em;  /* Slightly smaller text on mobile */
+    }
+
+    #intro p {
+        font-size: 1.1em;  /* Adjust font size for better readability */
+    }
+    
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
     #menu {
         display: none;  /* Hide menu on small screens by default */
         position: absolute;
@@ -388,6 +640,56 @@ footer p {
         font-size: 14px; /* Further decrease font size */
         line-height: 1.1; /* Compact spacing */
         margin: 0; /* Remove any default margins */
+    }
+
+    .actuality-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .news-card {
+        max-width: 100%;
+    }
+
+    #about {
+        margin-top: 30px;
+    }
+
+    #about h2 {
+        font-size: 28px; /* Smaller heading font on mobile */
+    }
+
+    .about-container {
+        flex-direction: column; /* Stack content on mobile */
+        text-align: center; /* Center text and image */
+    }
+
+    .about-text {
+        max-width: 100%; /* Make text section full width on mobile */
+        margin-bottom: 20px;
+    }
+
+    #about img {
+        width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    #courses {
+        padding: 20px 10px; /* Reduce padding on smaller screens */
+    }
+
+    #courses h2 {
+        font-size: 28px; /* Adjust heading font size for mobile */
+    }
+
+    #courses ul li {
+        font-size: 18px; /* Adjust font size for readability */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
     }
 }
 
