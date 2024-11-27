@@ -33,7 +33,7 @@
 /* Hidden Contact Details */
 .contact-details {
     display: none; /* Hidden by default */
-    background-color: #333;
+    background-color: #e50914;
     color: white;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -75,6 +75,11 @@
     transform: scale(1.1);
 }
 
+.highlight {
+    color: black;
+}
+
+
 /* Body */
 body {
     font-family: 'Roboto', sans-serif;
@@ -113,14 +118,20 @@ header img {
 }
 
 header h1 {
-    font-family: 'Lora', serif;
-    font-size: 36px;
-    color: #e50914;
-    font-weight: 700;
+    font-family: 'Dancing Script', cursive;
+    font-size: 48px; /* Increase the font size for a bolder look */
+    color: #e50914; /* Keep the bright red color */
+    font-weight: 700; /* Make it bold */
     margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    letter-spacing: 3px; /* Slightly increased letter spacing for readability */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4); /* Soft shadow with larger blur */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+header h1:hover {
+    color: #ff0000; /* Change color on hover */
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6); /* Darker shadow on hover */
+    transform: scale(1.1); /* Slightly enlarge the text on hover */
 }
 
 /* Navigation */
@@ -167,13 +178,28 @@ header nav ul li a:hover::after {
     transform-origin: bottom left;
 }
 
-header nav ul li a c {
-    color: #e50914;
+header nav ul li a.btn-register {
+    background-color: #e50914; /* Red background */
+    color: white; /* White text */
+    padding: 12px 24px; /* Add more padding for button effect */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 18px; /* Adjust font size if needed */
+    font-weight: bold; /* Bold text */
+    text-transform: none; /* Remove uppercase to keep text normal */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
-header nav ul li a c:hover {
-    color: #ffffff;
+header nav ul li a.btn-register:hover {
+    background-color: #d40712; /* Darker red on hover */
+    color: white; /* Keep the text white */
+    text-decoration: none; /* No underline effect on hover */
 }
+
+header nav ul li a.btn-register::after {
+    display: none; /* Hide the underline effect */
+}
+
 
 
 
@@ -523,7 +549,7 @@ section h2:hover {
 }
 
 #contact p {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 1px;
 }
 
