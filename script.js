@@ -27,4 +27,16 @@ function toggleMenu() {
     toggle.classList.toggle('active');  // Optionally add some style to the icon
 }
 
+document.getElementById("contact-icon").addEventListener("click", function () {
+    const contactDetails = document.getElementById("contact-details");
+    // Toggle visibility of the contact details
+    if (contactDetails.style.display === "block") {
+        contactDetails.style.display = "none";
+    } else {
+        contactDetails.style.display = "block";
+    }
+});
+
+
+
 

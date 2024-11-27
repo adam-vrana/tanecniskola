@@ -5,16 +5,66 @@
     box-sizing: border-box;
 }
 
-/* Styl pro umístění logo Facebooku */
+/* Styling for the Contact section *//* Styling for the Contact section */
+/* Contact Button Styling */
+/* Contact Image Styling */
+.contact-container {
+    position: fixed;
+    bottom: 80px; /* Adjust for spacing above Facebook logo */
+    right: 20px;
+    z-index: 9999;
+    text-align: center;
+}
+
+.contact-img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Hidden Contact Details */
+.contact-details {
+    display: none; /* Hidden by default */
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    margin-top: 10px; /* Space between image and details */
+    font-size: 0.9em;
+}
+
+.contact-details p {
+    margin: 5px 0;
+}
+
+.contact-details a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* Facebook Logo */
 .facebook-logo {
     position: fixed;
-    bottom: 20px; /* Upravte, jak daleko od spodní části obrazovky chcete logo */
-    right: 20px; /* Upravte, jak daleko od pravé strany obrazovky chcete logo */
-    z-index: 9999; /* Ujistěte se, že logo je vždy na vrchu */
+    bottom: 20px; /* Position below the contact button */
+    right: 20px;
+    z-index: 9999;
 }
 
 .facebook-logo img {
-    width: 50px; /* Nastavte velikost ikony podle potřeby */
+    width: 50px;
     height: 50px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -22,9 +72,8 @@
 }
 
 .facebook-logo img:hover {
-    transform: scale(1.1); /* Efekt zvětšení při najetí */
+    transform: scale(1.1);
 }
-
 
 /* Body */
 body {
