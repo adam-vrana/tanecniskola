@@ -558,7 +558,7 @@ section h2:hover {
 /* Centered text on top of images */
 .gallery-text {
     position: absolute;
-    top: 10%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0);
