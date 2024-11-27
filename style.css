@@ -5,6 +5,25 @@
     box-sizing: border-box;
 }
 
+/* Styl pro umístění logo Facebooku */
+.facebook-logo {
+    position: fixed;
+    bottom: 20px; /* Upravte, jak daleko od spodní části obrazovky chcete logo */
+    right: 20px; /* Upravte, jak daleko od pravé strany obrazovky chcete logo */
+    z-index: 9999; /* Ujistěte se, že logo je vždy na vrchu */
+}
+
+.facebook-logo img {
+    width: 50px; /* Nastavte velikost ikony podle potřeby */
+    height: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.facebook-logo img:hover {
+    transform: scale(1.1); /* Efekt zvětšení při najetí */
+}
 
 
 /* Body */
