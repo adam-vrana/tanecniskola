@@ -5,6 +5,8 @@
     box-sizing: border-box;
 }
 
+
+
 /* Body */
 body {
     font-family: 'Roboto', sans-serif;
@@ -359,6 +361,27 @@ footer p {
     #menu li a:hover {
         background-color: #e50914;
         color: white;
+    }
+
+    /* Reduce header height */
+    header {
+        padding: 10px 20px; /* Decrease padding to reduce height */
+    }
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Reduce space between logo and text */
+    }
+
+    .logo-container img {
+        width: 50px; /* Reduce logo size */
+        height: 50px;
+    }
+
+    .logo-container h1 {
+        font-size: 18px; /* Decrease text size */
+        line-height: 1.2; /* Adjust line spacing for compact look */
     }
 }
 
