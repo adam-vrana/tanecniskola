@@ -200,6 +200,7 @@ main {
     margin-bottom: 20px;
     font-weight: 700;
     transition: color 0.3s ease-in-out; 
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 #actuality h2:hover {
@@ -343,11 +344,13 @@ main {
     margin-bottom: 20px;
     font-weight: 700;
     transition: color 0.3s ease-in-out;  /* Smooth color transition */
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 #about h2:hover {
     color: #e50914;  /* Highlight color on hover */
 }
+
 
 /* Container for text and image */
 .about-container {
@@ -417,6 +420,7 @@ section h2 {
     margin-bottom: 20px;
     font-weight: 700;
     transition: color 0.3s ease-in-out;  /* Add transition for color change */
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 section h2:hover {
@@ -440,6 +444,11 @@ section h2:hover {
     margin-bottom: 20px;
     border-bottom: 2px solid #e50914;
     padding-bottom: 10px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+#courses h2:hover {
+    color: #e50914;
 }
 
 #courses ul {
@@ -493,6 +502,11 @@ section h2:hover {
     margin-bottom: 20px;
     border-bottom: 2px solid #e50914;
     padding-bottom: 10px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+#contact h2:hover {
+    color: #e50914;
 }
 
 #contact iframe map{
@@ -519,8 +533,8 @@ section h2:hover {
 }
 
 #register h2 {
-    text-align: left
-    
+    text-align: left;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 #register form {
@@ -576,6 +590,7 @@ section h2:hover {
 
 #gallery h2 {
     text-align: left;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .gallery-container {
