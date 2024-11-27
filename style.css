@@ -78,7 +78,7 @@
 /* Body */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f9;
+    background-color: #e0e0e0;
     color: #333;
     line-height: 1.7;
     font-size: 16px;
@@ -167,6 +167,14 @@ header nav ul li a:hover::after {
     transform-origin: bottom left;
 }
 
+header nav ul li a c {
+    color: #e50914;
+}
+
+header nav ul li a c:hover {
+    color: #ffffff;
+}
+
 
 
 
@@ -174,10 +182,10 @@ header nav ul li a:hover::after {
 main {
     max-width: 1200px;
     margin: 40px auto;
-    padding: 40px;
-    background-color: #ffffff;
+    
+    background-color: #e0e0e0;
     border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0);
     transition: all 0.3s ease-in-out;
 }
 
@@ -189,7 +197,7 @@ main {
     background-color: #f8f8f8;
     text-align: center;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 #actuality h2 {
@@ -218,7 +226,7 @@ main {
 /* News Card */
 .news-card {
     background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.247);
     border-radius: 8px;
     overflow: hidden;
     max-width: 300px;
@@ -464,7 +472,7 @@ section h2:hover {
     padding: 12px 20px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.247);
     transition: background-color 0.2s ease, padding-left 0.2s ease;
 }
 
@@ -509,6 +517,16 @@ section h2:hover {
     color: #e50914;
 }
 
+#contact h3 {
+    font-size: 24px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+#contact p {
+    font-size: 18px;
+    margin-bottom: 1px;
+}
+
 #contact iframe map{
     width: 100%;
     height: 400px;
@@ -524,46 +542,20 @@ section h2:hover {
 }
 
 
-#register {
+#registerform {
     margin-top: 50px;
     padding: 40px 20px;
     background-color: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-#register h2 {
+#registerform h2 {
     text-align: left;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
-#register form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 30px;
-    border-radius: 12px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-#register form input, #register form select {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    background-color: #f9f9f9;
-}
-
-#register form input:focus, #register form select:focus {
-    border-color: #e50914;
-    outline: none;
-    background-color: #fff; /* Ensure the background is white on focus */
-}
-
-#register form button {
+#registerform button {
     background-color: #e50914;
     color: white;
     padding: 12px 20px;
@@ -574,7 +566,63 @@ section h2:hover {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-#register form button:hover {
+#registerform button:hover {
+    background-color: #d40813;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+
+#writeus {
+    margin-top: 50px;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#writeus h2 {
+    text-align: center;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+#writeus form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#writeus form input, #writeus form select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+#writeus form input:focus, #writeus form select:focus {
+    border-color: #e50914;
+    outline: none;
+    background-color: #fff; /* Ensure the background is white on focus */
+}
+
+#writeus form button {
+    background-color: #e50914;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#writeus form button:hover {
     background-color: #d40813;
     transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
