@@ -545,21 +545,23 @@ section h2:hover {
     border-radius: 8px;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease, filter 0.2s ease;
+    filter: brightness(0.8); /* Darken the image */
 }
 
 .gallery-container img:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    filter: brightness(1); /* Restore brightness on hover */
 }
 
 /* Centered text on top of images */
 .gallery-text {
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0);
     color: white;
     padding: 8px 12px;
     border-radius: 4px;
