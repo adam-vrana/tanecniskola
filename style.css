@@ -856,6 +856,10 @@ footer p {
 /* Media Queries */
 @media screen and (max-width: 768px) {
     /* Hide the navigation menu by default on small screens */
+    #back-to-top {
+        display: none; /* Show the button */
+    }
+
     #intro {
         padding: 80px 20px;  /* Adjust padding for smaller screens */
     }
