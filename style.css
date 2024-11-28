@@ -865,7 +865,7 @@ footer p {
     }
 
     #intro h1 {
-        font-size: 2.5em;  /* Slightly smaller text on mobile */
+        font-size: 2.0em;  /* Slightly smaller text on mobile */
     }
 
     #intro p {
@@ -923,12 +923,12 @@ footer p {
     }
 
     .logo-container img {
-        width: 40px; /* Make logo smaller */
-        height: 40px;
+        width: 50px; /* Make logo smaller */
+        height: 50px;
     }
 
     .logo-container h1 {
-        font-size: 14px; /* Further decrease font size */
+        font-size: 32px; /* Further decrease font size */
         line-height: 1.1; /* Compact spacing */
         margin: 0; /* Remove any default margins */
     }
