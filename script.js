@@ -1,9 +1,12 @@
 
-// Ensure the first section is visible when the page loads
+// Ensure the first two sections are visible when the page loads
 window.addEventListener('load', () => {
-    const firstSection = document.querySelector('section');
-    if (firstSection) {
-        firstSection.classList.add('show');
+    const sections = document.querySelectorAll('section');
+    if (sections.length > 0) {
+        sections[0].classList.add('show');
+    }
+    if (sections.length > 1) {
+        sections[1].classList.add('show');
     }
 });
 
@@ -13,7 +16,7 @@ window.addEventListener('scroll', () => {
     sections.forEach(section => {
         const sectionTop = section.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
-        if (sectionTop < windowHeight - 150) {
+        if (sectionTop < windowHeight - 25) {
             section.classList.add('show');
         }
     });
@@ -37,6 +40,32 @@ document.getElementById("contact-icon").addEventListener("click", function () {
     }
 });
 
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+
+// Ukázat nebo skrýt tlačítko podle pozice stránky
+window.addEventListener('scroll', () => {
+    const backToTop = document.getElementById('back-to-top');
+    if (window.scrollY > 200) { // Zobrazit tlačítko po scrollnutí dolů o 200px
+        backToTop.style.display = 'block';
+    } else {
+        backToTop.style.display = 'none';
+    }
+});
+
+// Posunout stránku zpět nahoru
+document.getElementById('back-to-top').addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
 
 
 

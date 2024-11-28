@@ -5,6 +5,8 @@
     box-sizing: border-box;
 }
 
+
+
 /* Styling for the Contact section *//* Styling for the Contact section */
 /* Contact Button Styling */
 /* Contact Image Styling */
@@ -74,6 +76,52 @@
 .facebook-logo img:hover {
     transform: scale(1.1);
 }
+
+
+#back-to-top {
+    display: none; /* Initially hidden */
+    position: fixed;
+    bottom: 25px; /* Distance from the bottom */
+    left: 20px; /* Distance from the left corner */
+    background-color: #e50914; /* Red background */
+    color: #fff; /* Text color */
+    border: none; /* Remove borders */
+    border-radius: 8px; /* Circular button */
+    width: 50px; /* Width of the button */
+    height: 50px; /* Height of the button */
+    text-align: center; /* Center the text */
+    line-height: 50px; /* Vertically center the text */
+    font-size: 25px; /* Text size */
+    cursor: pointer; /* Pointer cursor on hover */
+    z-index: 9999; /* Make sure it appears above other content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    
+}
+
+#back-to-top:hover {
+    background-color: #555;
+}
+
+#back-to-top:active {
+    transform: scale(0.9) rotate(360deg);
+    background-color: #555;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+
+
+/* #back-to-top {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+#back-to-top:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+} */
+
+
+
+
 
 .highlight {
     color: black;
@@ -214,6 +262,7 @@ main {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0);
     transition: all 0.3s ease-in-out;
 }
+
 
 /* Hero Section */
 
