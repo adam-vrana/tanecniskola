@@ -598,6 +598,76 @@ section h2:hover {
 }
 
 
+#course-application {
+    margin-top: 50px;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#course-application h2 {
+    text-align: center; /* Center the text */
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 32px; /* Adjust font size as needed */
+    color: white; /* White text */
+    background-color: #e50914; /* Red background */
+    padding: 10px 20px; /* Adjust padding to create button-like spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    display: inline-block; /* Prevent stretching */
+    margin: 0 auto 20px; /* Center the element and add spacing below */
+}
+
+#course-application h2:hover {
+    background-color: #d40813; /* Darker red on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+
+#course-application form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#course-application form input, #course-application form select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+#course-application form input:focus, #course-application form select:focus {
+    border-color: #e50914;
+    outline: none;
+    background-color: #fff; /* Ensure the background is white on focus */
+}
+
+#course-application form button {
+    background-color: #e50914;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#course-application form button:hover {
+    background-color: #d40813;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+
 #writeus {
     margin-top: 50px;
     padding: 40px 20px;

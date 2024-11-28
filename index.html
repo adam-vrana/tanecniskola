@@ -27,7 +27,7 @@
                 <li><a href="#about">Profil</a></li>
                 <li><a href="#courses">Kurzy</a></li>
                 <li><a href="#contact">Kontakt</a></li>
-                <li><a href="#registerform" class="btn-register"><c>Přihláška</c></a></li>
+                <li><a href="#course-application" class="btn-register"><c>Přihláška</c></a></li>
             </ul>
         </nav>
     </header>
@@ -149,11 +149,45 @@
             </iframe>
         </section>     
 
-        <section id="registerform">
+        <!-- <section id="registerform">
             <h2>Přihláška na kurz</h2>
             <a href="register.html">
                 <button id="show-form">Otevřít formulář</button>
             </a>
+        </section> -->
+
+        <section id="course-application">
+            <h2>Přihláška na kurz</h2>
+            <form action="https://formspree.io/f/xldepore" method="post">
+                <label for="name">Vaše jméno</label>
+                <input name="Name" id="name" type="text" placeholder="Zadejte své jméno" required>
+        
+                <label for="email">Váš e-mail</label>
+                <input name="Email" id="email" type="email" placeholder="Zadejte svůj e-mail" required>
+        
+                <label for="phone">Telefonní číslo</label>
+                <input name="Phone" id="phone" type="tel" placeholder="Zadejte své telefonní číslo" required>
+        
+                <label for="course">Vyberte kurz</label>
+                <select name="Course" id="course" required>
+                    <option value="" disabled selected>-- Vyberte kurz --</option>
+                    <option value="Tango Beginners">Tango pro začátečníky</option>
+                    <option value="Tango Advanced">Tango pro pokročilé</option>
+                    <option value="Private Lesson">Soukromá lekce</option>
+                </select>
+
+                <!-- <label for="partner">Máte tanečního partnera?</label>
+                <input type="radio" name="Partner" id="partner" value="Yes" required>
+                <label for="yes">Ano</label>
+                <input type="radio" name="Partner" id="partner" value="No" required>
+                <label for="no">Ne</label> -->
+                
+        
+                <label for="message">Poznámka</label>
+                <textarea name="Message" id="message" rows="4" placeholder=" Máte nějaké zvláštní požadavky?"></textarea>
+        
+                <button type="submit">Odeslat přihlášku</button>
+            </form>
         </section>
 
         <section id="writeus">
@@ -164,17 +198,15 @@
                 
                 <label for="email">Váš e-mail</label>
                 <input name="Email" id="email" type="email" placeholder="Zadejte svůj e-mail" required>
-                
+
                 <label for="message">Vaše zpráva</label>
-                <textarea name="Message" id="message" rows="5" placeholder="Napište svou zprávu" required></textarea>
+                <textarea name="Message" id="message" rows="5" placeholder=" Napište svou zprávu" required></textarea>
                 
                 <button type="submit">Odeslat</button>
             </form>
         </section>
         
-              
         
-</section>
 
     </main>
     
