@@ -1,6 +1,15 @@
 
 // Ensure the first two sections are visible when the page loads
-window.addEventListener('load', () => {
+// window.addEventListener('load', () => {
+//     const sections = document.querySelectorAll('section');
+//     if (sections.length > 0) {
+//         sections[0].classList.add('show');
+//     }
+//     if (sections.length > 1) {
+//         sections[1].classList.add('show');
+//     }
+// });
+window.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section');
     if (sections.length > 0) {
         sections[0].classList.add('show');
@@ -9,6 +18,7 @@ window.addEventListener('load', () => {
         sections[1].classList.add('show');
     }
 });
+
 
 // Efekty při scrollování
 window.addEventListener('scroll', () => {
