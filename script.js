@@ -9,15 +9,6 @@
 //         sections[1].classList.add('show');
 //     }
 // });
-window.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('section');
-    if (sections.length > 0) {
-        sections[0].classList.add('show');
-    }
-    if (sections.length > 1) {
-        sections[1].classList.add('show');
-    }
-});
 
 
 // Efekty při scrollování
@@ -60,12 +51,17 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
 
 
 // Ukázat nebo skrýt tlačítko podle pozice stránky
+// Ukázat nebo skrýt tlačítko podle pozice stránky
 window.addEventListener('scroll', () => {
     const backToTop = document.getElementById('back-to-top');
-    if (window.scrollY > 200) { // Zobrazit tlačítko po scrollnutí dolů o 200px
-        backToTop.style.display = 'block';
+    if (window.innerWidth > 768) { // Check if the screen width is greater than 768px (not mobile)
+        if (window.scrollY > 200) { // Zobrazit tlačítko po scrollnutí dolů o 200px
+            backToTop.style.display = 'block';
+        } else {
+            backToTop.style.display = 'none';
+        }
     } else {
-        backToTop.style.display = 'none';
+        backToTop.style.display = 'none'; // Hide button on mobile
     }
 });
 
@@ -76,6 +72,7 @@ document.getElementById('back-to-top').addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
 
 
 
